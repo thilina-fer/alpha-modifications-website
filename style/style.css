@@ -1,0 +1,224 @@
+:root {
+  /* Your custom RED color. Change this one value to re-theme the site. */
+  --alpha-red: #e50914;
+  --alpha-black: #141414;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--alpha-black);
+  color: #f8f9fa; /* Light white text */
+}
+
+/* --- Typography --- */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.navbar-brand,
+.hero-content h1 {
+  font-family: "Exo 2", sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.display-3 {
+  color: var(--alpha-red);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* --- Navigation Bar --- */
+.navbar {
+  background-color: rgba(0, 0, 0, 0.8) !important;
+  backdrop-filter: blur(10px);
+}
+
+.navbar-brand {
+  color: var(--alpha-red) !important;
+  font-size: 1.8rem;
+}
+
+.nav-link {
+  color: #ffffff !important;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-left: 15px;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--alpha-red) !important;
+}
+
+/* --- Hero Section --- */
+.hero {
+  position: relative;
+  height: 90vh;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  /* Use a high-quality photo of a car or your shop */
+  background-image: url("https://images.unsplash.com/photo-1542362567-b07e54358753?fit=crop&w=1600&h=900");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Parallax effect */
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9));
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* --- Buttons --- */
+.btn-brand {
+  background-color: var(--alpha-red);
+  color: #ffffff;
+  border: none;
+  padding: 12px 30px;
+  font-family: "Exo 2", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.btn-brand:hover {
+  background-color: #ffffff;
+  color: var(--alpha-red);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.btn-outline-brand {
+  color: #ffffff;
+  border-color: #ffffff;
+  padding: 12px 30px;
+  font-family: "Exo 2", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-brand:hover {
+  background-color: var(--alpha-red);
+  color: #ffffff;
+  border-color: var(--alpha-red);
+}
+
+/* --- Section Styling --- */
+section {
+  padding: 80px 0;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-title h2 {
+  font-size: 2.5rem;
+  color: #ffffff;
+}
+
+.section-title p {
+  font-size: 1.1rem;
+  color: #adb5bd;
+}
+
+/* Underline effect */
+.section-title h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background-color: var(--alpha-red);
+  margin: 20px auto 0;
+}
+
+/* --- Services/Items Section --- */
+.service-card {
+  background-color: #222;
+  border: 1px solid #333;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 30px;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.service-card .card-body {
+  padding: 25px;
+}
+
+.service-card .card-title {
+  color: var(--alpha-red);
+  font-size: 1.5rem;
+}
+
+/* --- Gallery Section --- */
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery-item img {
+  transition: transform 0.4s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1);
+}
+
+.gallery-item .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(229, 9, 20, 0.8);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  font-family: "Exo 2", sans-serif;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+.gallery-item:hover .overlay {
+  opacity: 1;
+}
+
+/* --- Contact Section --- */
+#contact {
+  background-color: #000;
+}
+
+/* --- Footer --- */
+footer {
+  background-color: #000;
+  padding: 30px 0;
+  border-top: 1px solid #333;
+}
